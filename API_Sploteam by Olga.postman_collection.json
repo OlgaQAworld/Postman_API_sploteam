@@ -1,0 +1,621 @@
+{
+	"info": {
+		"_postman_id": "ad906cd4-52f4-4487-a834-139f36ac723c",
+		"name": "API_Sploteam by Olga",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25888739"
+	},
+	"item": [
+		{
+			"name": "Регистрация Successful",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Registration successfully completed\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Esthotim2#",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "sploteam",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*123*",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"{{$randomEmail}}\",\n  \"password\": \"Test234\",\n  \"name\": \"Olga\",\n  \"phone\": \"+79255555555\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://frontend.beta-spltm.ru/api/accounts/signup",
+					"protocol": "https",
+					"host": [
+						"frontend",
+						"beta-spltm",
+						"ru"
+					],
+					"path": [
+						"api",
+						"accounts",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Регистрация Negative Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"invalid name\", function () {",
+							"    pm.response.to.have.status(422);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Esthotim2#",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "sploteam",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*123*",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"{{$randomEmail}}\",\n  \"password\": \"Test234\",\n  \"name\": \"\",\n  \"phone\": \"+79255555555\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://frontend.beta-spltm.ru/api/accounts/signup",
+					"protocol": "https",
+					"host": [
+						"frontend",
+						"beta-spltm",
+						"ru"
+					],
+					"path": [
+						"api",
+						"accounts",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Проверка cуществования почты",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Esthotim2#",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "sploteam",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://frontend.beta-spltm.ru/api/accounts/exists?email=example%2Bp1@gmail.com",
+					"protocol": "https",
+					"host": [
+						"frontend",
+						"beta-spltm",
+						"ru"
+					],
+					"path": [
+						"api",
+						"accounts",
+						"exists"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "string",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "M",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "example%2Bp1@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Подтверждение регистрации",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Esthotim2#",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "sploteam",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://frontend.beta-spltm.ru/api/accounts/confirm/kXNhV92o23DrbTW2tDaWbh/",
+					"protocol": "https",
+					"host": [
+						"frontend",
+						"beta-spltm",
+						"ru"
+					],
+					"path": [
+						"api",
+						"accounts",
+						"confirm",
+						"kXNhV92o23DrbTW2tDaWbh",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit my profile",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ATATT3xFfGF01pX4BmfBjN4TbryPmrUjom8X06vlSleKLJRZL23JKIIGeBuOXKtUG9kBF20xz4kyd1F3VKx9FoiWxuV39sk1hu4BJ_uADHakE2zXigHbhe_XuHKcGo7XYTsuWBKT9vTtTrgt8XHBp-jadZf-IDzJMuXXFd4ZmVlshNpMe9xKrzg=C9E31F84",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "testuserjanuary2022@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fields\": {\n       \"project\": {\n          \"id\": \"10000\"\n       },\n       \"summary\": \"UPDATED\",\n       \"description\": \"Можно поменять описание. а можно попробовать поменять issuetype 10001 - это задача 10004 - это баг, информацию про типы issuetype можно получить из метода get issuetype. \",\n       \"issuetype\": {\n          \"id\": \"10001\"\n       }\n   }\n}"
+				},
+				"url": {
+					"raw": "https://frontend.beta-spltm.ru/api/users/me/",
+					"protocol": "https",
+					"host": [
+						"frontend",
+						"beta-spltm",
+						"ru"
+					],
+					"path": [
+						"api",
+						"users",
+						"me",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Логин",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Esthotim2#",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "sploteam",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"yasmeenheaven833+1@gmail.com\",\n  \"password\": \"Test-3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/accounts/login",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"accounts",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload avatar",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Esthotim2#",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "sploteam",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/Users/olyayevtyunina/Desktop/My FREE CODE/My-Portfolio/my-photo-wb.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://frontend.beta-spltm.ru/api/users/upload_avatar",
+					"protocol": "https",
+					"host": [
+						"frontend",
+						"beta-spltm",
+						"ru"
+					],
+					"path": [
+						"api",
+						"users",
+						"upload_avatar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove avatar",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Esthotim2#",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "sploteam",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/Users/olyayevtyunina/Desktop/My FREE CODE/My-Portfolio/my-photo-wb.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://frontend.beta-spltm.ru/api/users/remove_avatar",
+					"protocol": "https",
+					"host": [
+						"frontend",
+						"beta-spltm",
+						"ru"
+					],
+					"path": [
+						"api",
+						"users",
+						"remove_avatar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Информация для главной страницы",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Esthotim2#",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "sploteam",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://frontend.beta-spltm.ru/api/home/",
+					"protocol": "https",
+					"host": [
+						"frontend",
+						"beta-spltm",
+						"ru"
+					],
+					"path": [
+						"api",
+						"home",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get/Home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://frontend.beta-spltm.ru/api/home/",
+					"protocol": "https",
+					"host": [
+						"frontend",
+						"beta-spltm",
+						"ru"
+					],
+					"path": [
+						"api",
+						"home",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User information",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"User Information displayed successfuly\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/users/{{user_id}}/",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"{{user_id}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Initial",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"let id_from_response = pm.response.json().user.id",
+							"console.log(id_from_response)",
+							"pm.environment.set(\"user_id\", id_from_response);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/initial/",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"initial",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
