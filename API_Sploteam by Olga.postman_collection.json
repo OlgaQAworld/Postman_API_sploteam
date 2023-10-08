@@ -30,12 +30,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "Esthotim2#",
+							"value": "password",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "sploteam",
+							"value": "login",
 							"type": "string"
 						}
 					]
@@ -100,12 +100,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "Esthotim2#",
+							"value": "password",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "sploteam",
+							"value": "login",
 							"type": "string"
 						}
 					]
@@ -164,12 +164,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "Esthotim2#",
+							"value": "password",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "sploteam",
+							"value": "login",
 							"type": "string"
 						}
 					]
@@ -228,12 +228,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "Esthotim2#",
+							"value": "password",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "sploteam",
+							"value": "login",
 							"type": "string"
 						}
 					]
@@ -241,7 +241,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://frontend.beta-spltm.ru/api/accounts/confirm/kXNhV92o23DrbTW2tDaWbh/",
+					"raw": "https://frontend.beta-spltm.ru/api/accounts/confirm/path{}/",
 					"protocol": "https",
 					"host": [
 						"frontend",
@@ -252,7 +252,7 @@
 						"api",
 						"accounts",
 						"confirm",
-						"kXNhV92o23DrbTW2tDaWbh",
+						"path{}",
 						""
 					]
 				}
@@ -327,12 +327,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "Esthotim2#",
+							"value": "password",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "sploteam",
+							"value": "login",
 							"type": "string"
 						}
 					]
@@ -341,7 +341,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"email\": \"yasmeenheaven833+1@gmail.com\",\n  \"password\": \"Test-3\"\n}",
+					"raw": "{\n  \"email\": \"aaaaa1@gmail.com\",\n  \"password\": \"Test-3\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -381,12 +381,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "Esthotim2#",
+							"value": "password",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "sploteam",
+							"value": "login",
 							"type": "string"
 						}
 					]
@@ -439,12 +439,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "Esthotim2#",
+							"value": "password",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "sploteam",
+							"value": "login",
 							"type": "string"
 						}
 					]
@@ -497,12 +497,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "Esthotim2#",
+							"value": "password",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "sploteam",
+							"value": "login",
 							"type": "string"
 						}
 					]
